@@ -34,15 +34,24 @@ function updateFilters() {
 
     // 4b. Save the value that was changed as a variable.
     let elementValue = changedElement.property("value");
+    console.log(elementValue);
 
     // 4c. Save the id of the filter that was changed as a variable.
-
+    let filterId = changedElement.attr("id");
+    console.log(filterId)
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
+    if (elementValue) {
+      filters[filterId] = elementValue;
+    }
+    else {
+      delete filters[filterId]
+    }
  
   
     // 6. Call function to apply all filters and rebuild the table
+    
     filterTable();
   
   }
@@ -51,13 +60,22 @@ function updateFilters() {
   function filterTable() {
   
     // 8. Set the filtered data to the tableData.
+    let filteredData = tableData;
     
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    
-  
+    for (i = 0; i < filters.length; i++) {
+      if (i == 'datetime') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.datetime === filters[i]);
+      };
+    }
+
+ 
     // 10. Finally, rebuild the table using the filtered data
+    buildTable(filteredData);
     
   }
   
