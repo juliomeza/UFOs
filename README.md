@@ -18,6 +18,8 @@ And in this last one I have used all 5 boxes to filter data by date, city, state
 
 ## Summary
 - One drawback is that the font color inside the filter boxes gives you the impression that the data is being filtered already.
+
+
 Recommendations:
 1. Move the filter search box to the top of the columns instead of the side of the page.
 2. Apply the filtering while typing instead of waiting for the 'Enter' key.
