@@ -16,8 +16,7 @@ And in this last one I have used all 5 boxes to filter data by date, city, state
 
 <img src="https://github.com/juliomeza/UFOs/blob/main/img/all.png" width="800">
 
-
-Describe to Dana how someone might use the new webpage by walking her through the process of using the search criteria. Use images of your webpage during the filtering process to support your explanation.
-
 ## Summary
+- The font color inside the filter boxes gives you the impression that the data is being filtered. 
+
 In a summary statement, describe one drawback of this new design and two recommendations for further development.
