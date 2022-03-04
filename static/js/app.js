@@ -34,11 +34,11 @@ function updateFilters() {
 
     // 4b. Save the value that was changed as a variable.
     let elementValue = changedElement.property("value");
-    console.log(elementValue);
+    // console.log(elementValue);
 
     // 4c. Save the id of the filter that was changed as a variable.
     let filterId = changedElement.attr("id");
-    console.log(filterId);
+    // console.log(filterId);
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.  
@@ -61,12 +61,45 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.keys(filters).forEach(function(key) {console.log(key + " " + filters[key]);});
+    Object.keys(filters).forEach(function(key) {
+      console.log(key + " " + filters[key]);
+      
+      if (key == 'datetime') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.datetime === filters[key]);
+      };
 
-    console.log(Object.keys(filters).length)
-    console.log(filters);
+      if (key == 'city') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.city === filters[key]);
+      };
 
- 
+      if (key == 'state') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.state === filters[key]);
+      };
+
+      if (key == 'country') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.country === filters[key]);
+      };
+
+      if (key == 'shape') {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.shape === filters[key]);
+      };
+    
+    
+    });
+
+    // console.log(Object.keys(filters).length)
+    // console.log(filters);
+
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
     
