@@ -17,6 +17,7 @@ And in this last one I have used all 5 boxes to filter data by date, city, state
 <img src="https://github.com/juliomeza/UFOs/blob/main/img/all.png" width="800">
 
 ## Summary
-- The font color inside the filter boxes gives you the impression that the data is being filtered. 
-
-In a summary statement, describe one drawback of this new design and two recommendations for further development.
+- One drawback is that the font color inside the filter boxes gives you the impression that the data is being filtered already.
+Recommendations:
+1. Move the filter search box to the top of the columns instead of the side of the page.
+2. Apply the filtering while typing instead of waiting for the 'Enter' key.
